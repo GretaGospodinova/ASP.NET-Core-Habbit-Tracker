@@ -52,7 +52,7 @@ namespace HabitTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Habit habit)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description")] Habit habit)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace HabitTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Habit habit)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] Habit habit)
         {
             if (id != habit.Id)
             {
